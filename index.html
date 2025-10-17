@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sitio web responsive</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Header con logo, menús y búsqueda -->
+  <header class="d-flex justify-content-between align-items-center p-3">
+    <div class="nav-left d-flex align-items-center gap-3">
+      <div class="logo fw-bold">DRAGON SITIO</div>
+
+      <div class="dropdown">
+        <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown">
+          Menú 1
+        </button>
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item" href="#">Opción 1</a></li>
+          <li><a class="dropdown-item" href="#">Opción 2</a></li>
+          <li><a class="dropdown-item" href="#">Opción 3</a></li>
+        </ul>
+      </div>
+
+      <div class="dropdown">
+        <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown">
+          Menú 2
+        </button>
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item" href="#">Opción A</a></li>
+          <li><a class="dropdown-item" href="#">Opción B</a></li>
+        </ul>
+      </div>
+
+      <div class="dropdown">
+        <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown">
+          Menú 3
+        </button>
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item" href="#">Configuración</a></li>
+          <li><a class="dropdown-item" href="#">Ayuda</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="search-bar d-flex align-items-center gap-2">
+      <input type="text" class="form-control" placeholder="Buscar...">
+      <button class="btn btn-primary">🔍</button>
+    </div>
+  </header>
+
+  <!-- Carrusel centrado -->
+  <div class="text-carousel text-center my-4">
+    <div class="carousel-text fs-4">¡Bienvenido al mundo de Dragon Ball Z!</div>
+  </div>
+
+  <!-- Título -->
+  <h1 class="text-center">Dragon Ball Z...</h1>
+
+  <!-- Offset para dejar espacio a la izquierda -->
+<div class="col-md-8 offset-md-3 d-flex flex-wrap gap-4 justify-content-end">
+
+  <!-- Columna 1 -->
+  <div class="col-md-3 mb-3">
+    <p>La historia de Dragon Ball comienza con Son Goku, un niño con cola de mono inspirado en el mito chino del Rey Mono.</p>
+    <p>Junto a la inventora Bulma busca las siete esferas del dragón.</p>
+    <p>Su aventura mezcla artes marciales, fantasía y ciencia ficción, evolucionando hacia sagas de acción más complejas.</p>
+  </div>
+
+  <!-- Columna 2 -->
+  <div class="col-md-3 mb-3">
+    <p>La trama se centra en Goku, sus amigos y sus combates contra poderosos enemigos.</p>
+    <p>Descubre su origen extraterrestre como saiyajin.</p>
+    <p>Busca superarse a sí mismo y proteger a sus seres queridos.</p>
+  </div>
+
+  <!-- Columna 3 -->
+  <div class="col-md-3 mb-3">
+    <p>Inspiración y creación: El manga original, creado por Akira Toriyama, se publicó en 1984.</p>
+    <p>Está inspirado en la novela china clásica "Viaje al Oeste".</p>
+    <p>Toriyama combinó artes marciales, magia, fantasía y elementos de ciencia ficción.</p>
+  </div>
+
+</div>
+
+
+  <!-- Scripts -->
+  <script src="script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,176 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+/* --- ENCABEZADO --- */
+header {
+  background-color: #ff1010;
+  color: rgb(255, 0, 0);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 30px;
+}
+
+/* --- IZQUIERDA: logo y menús --- */
+.nav-left {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.logo {
+  font-size: 1.4em;
+  font-weight: bold;
+}
+
+/* --- MENÚS DESPLEGABLES --- */
+.dropdown {
+  position: relative;
+}
+
+.dropdown button {
+  background: none;
+  border: none;
+  color: rgb(255, 255, 255);
+  font-size: 1em;
+  cursor: pointer;
+  padding: 8px 12px;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 35px;
+  left: 0;
+  background-color: white;
+  color: rgb(255, 255, 255);
+  min-width: 150px;
+  border-radius: 5px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+.dropdown-content a {
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+  color: black;
+}
+
+.dropdown-content a:hover {
+  background-color: #f0f0f0;
+}
+
+/* Mostrar al pasar el mouse */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* --- DERECHA: barra de búsqueda --- */
+.search-bar {
+  display: flex;
+  align-items: center;
+  background-color: white;
+  border-radius: 20px;
+  padding: 5px 10px;
+}
+
+.search-bar input {
+  border: none;
+  outline: none;
+  padding: 5px;
+}
+
+.search-bar button {
+  background: #0078ff;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 28px;
+  height: 28px;
+  cursor: pointer;
+}
+
+.search-bar button:hover {
+  background: #005ecc;
+}
+
+.dropdown-content.show {
+  display: block;
+}
+
+/* 🔶 Carrusel centrado y pequeño */
+.text-carousel {
+  width: 60%;
+  max-width: 500px;
+  height: 35px;
+  margin: 15px auto;
+  background-color: #ff9800;
+  color: white;
+  border-radius: 20px;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.carousel-text {
+  white-space: nowrap;
+  position: absolute;
+  animation: moveText 40s linear infinite;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+@keyframes moveText {
+  0% { transform: translateX(100%); }
+  100% { transform: translateX(-100%); }
+}
+
+/* Contenido */
+h1 {
+  text-align: center;
+  color: #333;
+}
+
+p {
+  max-width: 800px;
+  margin: 20px auto;
+  line-height: 1.6;
+  text-align: justify;
+}
+
+/* --- Encabezado --- */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #20232a;
+  color: white;
+  padding: 10px 20px;
+
+  /* 🔹 Asegura que los menús queden por encima del carrusel */
+  position: relative;
+  z-index: 10;
+}
+
+/* --- Contenido del menú desplegable --- */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: white;
+  color: black;
+  min-width: 150px;
+  box-shadow: 0px 4px 8px rgba(0,0,0,0.2);
+  z-index: 20; /* 🔹 Aumentar prioridad sobre el carrusel */
+  border-radius: 5px;
+}
+
