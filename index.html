@@ -15,7 +15,7 @@
     <div class="nav-left d-flex align-items-center gap-3">
       <div class="logo fw-bold">DRAGON SITIO</div>
 
-      <div class="dropdown">
+      <div class="dropdown d-none d-md-block">
         <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown">
           Menú 1
         </button>
@@ -26,7 +26,7 @@
         </ul>
       </div>
 
-      <div class="dropdown">
+      <div class="dropdown d-none d-md-block">
         <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown">
           Menú 2
         </button>
@@ -36,7 +36,7 @@
         </ul>
       </div>
 
-      <div class="dropdown">
+      <div class="dropdown d-none d-md-block">
         <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown">
           Menú 3
         </button>
@@ -47,11 +47,33 @@
       </div>
     </div>
 
-    <div class="search-bar d-flex align-items-center gap-2">
+    <!-- Barra de búsqueda (oculta en móvil) -->
+    <div class="search-bar d-none d-md-flex align-items-center gap-2">
       <input type="text" class="form-control" placeholder="Buscar...">
       <button class="btn btn-primary">🔍</button>
     </div>
+
+    <!-- Botón hamburguesa visible en móvil -->
+    <button class="hamburger d-md-none">☰</button>
   </header>
+
+  <!-- Panel lateral derecho (menú móvil) -->
+  <div class="mobile-menu">
+    <button class="close-btn">✕</button>
+    <div class="p-3">
+      <h5 class="text-white mb-3">Menú</h5>
+      <ul class="list-unstyled">
+        <li><a href="#" class="text-white d-block py-2">Menú 1</a></li>
+        <li><a href="#" class="text-white d-block py-2">Menú 2</a></li>
+        <li><a href="#" class="text-white d-block py-2">Menú 3</a></li>
+      </ul>
+      <hr class="text-white">
+      <div class="d-flex align-items-center gap-2">
+        <input type="text" class="form-control" placeholder="Buscar...">
+        <button class="btn btn-primary">🔍</button>
+      </div>
+    </div>
+  </div>
 
   <!-- Carrusel centrado -->
   <div class="text-carousel text-center my-4">
@@ -111,30 +133,22 @@
 
     <!-- Columnas de texto -->
     <div class="col-md-8 d-flex flex-wrap gap-4 justify-content-end">
-
-      <!-- Columna 1 -->
       <div class="col-md-3 mb-3">
         <p>La historia de Dragon Ball comienza con Son Goku, un niño con cola de mono inspirado en el mito chino del Rey Mono.</p>
         <p>Junto a la inventora Bulma busca las siete esferas del dragón.</p>
         <p>Su aventura mezcla artes marciales, fantasía y ciencia ficción, evolucionando hacia sagas de acción más complejas.</p>
       </div>
-
-      <!-- Columna 2 -->
       <div class="col-md-3 mb-3">
         <p>La trama se centra en Goku, sus amigos y sus combates contra poderosos enemigos.</p>
         <p>Descubre su origen extraterrestre como saiyajin.</p>
         <p>Busca superarse a sí mismo y proteger a sus seres queridos.</p>
       </div>
-
-      <!-- Columna 3 -->
       <div class="col-md-3 mb-3">
         <p>Inspiración y creación: El manga original, creado por Akira Toriyama, se publicó en 1984.</p>
         <p>Está inspirado en la novela china clásica "Viaje al Oeste".</p>
         <p>Toriyama combinó artes marciales, magia, fantasía y elementos de ciencia ficción.</p>
       </div>
-
     </div>
-
   </div>
 
   <!-- Scripts -->
