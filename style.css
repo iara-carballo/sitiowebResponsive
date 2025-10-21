@@ -13,14 +13,14 @@ body {
 
 /* === HEADER === */
 header {
-  background-color: #20232a;
+  background-color: #f50000;
   color: white;
   position: relative;
   z-index: 10;
 }
 
 .logo {
-  color: #ff4b4b;
+  color: #d0ff00;
   font-weight: bold;
   font-size: 1.4em;
 }
