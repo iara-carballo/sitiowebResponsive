@@ -59,27 +59,69 @@
 
   <!-- Panel lateral derecho (menú móvil) -->
   <div class="mobile-menu">
-  <button class="close-btn">✕</button>
-  <div class="p-3">
+    <button class="close-btn">✕</button>
+    <div class="p-3">
 
-    <!-- 🔍 Buscador arriba -->
-    <div class="d-flex align-items-center gap-2 mb-3">
-      <input type="text" class="form-control" placeholder="Buscar...">
-      <button class="btn btn-primary">🔍</button>
-    </div>
-    <hr class="text-white">
+      <!-- 🔍 Buscador arriba -->
+      <div class="d-flex align-items-center gap-2 mb-3">
+        <input type="text" class="form-control" placeholder="Buscar...">
+        <button class="btn btn-primary">🔍</button>
+      </div>
+      <hr class="text-white">
 
-    <!-- Menú debajo -->
-    <h5 class="text-white mb-3">Menú</h5>
-    <ul class="list-unstyled">
-      <li><a href="#" class="text-white d-block py-2">Menú 1</a></li>
-      <li><a href="#" class="text-white d-block py-2">Menú 2</a></li>
-      <li><a href="#" class="text-white d-block py-2">Menú 3</a></li>
-    </ul>
+      <!-- Menús debajo -->
+      <div class="accordion accordion-flush" id="mobileAccordion">
+        <div class="accordion-item bg-transparent border-0">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed bg-transparent text-white" type="button" data-bs-toggle="collapse" data-bs-target="#menu1">
+              Menú 1
+            </button>
+          </h2>
+          <div id="menu1" class="accordion-collapse collapse" data-bs-parent="#mobileAccordion">
+            <div class="accordion-body">
+              <ul class="list-unstyled ps-3">
+                <li><a href="#" class="text-white d-block py-1">Opción 1</a></li>
+                <li><a href="#" class="text-white d-block py-1">Opción 2</a></li>
+                <li><a href="#" class="text-white d-block py-1">Opción 3</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
 
-  </div>
-</div>
+        <div class="accordion-item bg-transparent border-0">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed bg-transparent text-white" type="button" data-bs-toggle="collapse" data-bs-target="#menu2">
+              Menú 2
+            </button>
+          </h2>
+          <div id="menu2" class="accordion-collapse collapse" data-bs-parent="#mobileAccordion">
+            <div class="accordion-body">
+              <ul class="list-unstyled ps-3">
+                <li><a href="#" class="text-white d-block py-1">Opción A</a></li>
+                <li><a href="#" class="text-white d-block py-1">Opción B</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
 
+        <div class="accordion-item bg-transparent border-0">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed bg-transparent text-white" type="button" data-bs-toggle="collapse" data-bs-target="#menu3">
+              Menú 3
+            </button>
+          </h2>
+          <div id="menu3" class="accordion-collapse collapse" data-bs-parent="#mobileAccordion">
+            <div class="accordion-body">
+              <ul class="list-unstyled ps-3">
+                <li><a href="#" class="text-white d-block py-1">Configuración</a></li>
+                <li><a href="#" class="text-white d-block py-1">Ayuda</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div> <!-- /accordion -->
+    </div> <!-- /p-3 -->
+  </div> <!-- ✅ cierre correcto del menú móvil -->
 
   <!-- Carrusel centrado -->
   <div class="text-carousel text-center my-4">
