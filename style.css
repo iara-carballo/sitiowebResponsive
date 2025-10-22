@@ -135,32 +135,17 @@ header {
 h1 {
   text-align: center;
   color: #333;
-  margin-top: 20px;
+  margin-top: 10px;
 }
 
 /* === CONTENIDO === */
 .content-wrapper {
   display: flex;
   gap: 20px;
-  margin: 20px 10%;
   flex-wrap: wrap;
-}
-
-.side-menus {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-.side-menus .btn {
-  width: 150px;
-}
-
-.col-md-8 {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
   justify-content: end;
+  margin: 0 10%;
+  margin-top: 10px;
 }
 
 .col-md-3 p {
@@ -174,17 +159,11 @@ h1 {
   .content-wrapper {
     flex-direction: column;
     align-items: center;
-  }
-
-  .side-menus .btn {
-    width: 100%;
-  }
-
-  .col-md-8 {
-    justify-content: center;
+    margin-top: 20px;
   }
 
   .text-carousel {
+    margin: 10px auto;
     width: 90%;
   }
 }
@@ -206,3 +185,15 @@ h1 {
     display: none;
   }
 }
+
+/* === SUBE ELEMENTOS SOLO EN PANTALLAS GRANDES === */
+@media (min-width: 992px) {
+  .text-carousel,
+  h1,
+  .content-wrapper {
+    position: relative;
+    top: -170px; /* controla cuánto suben */
+    transition: top 0.3s ease;
+  }
+}
+

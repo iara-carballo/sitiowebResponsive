@@ -5,17 +5,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sitio web responsive</title>
   <link rel="stylesheet" href="style.css">
-  <!-- Bootstrap CSS -->  
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
 
-  <!-- Header con logo, menús y búsqueda -->
+  <!-- Header -->
   <header class="d-flex justify-content-between align-items-center p-3">
-    <div class="nav-left d-flex align-items-center gap-3">
-      <div class="logo fw-bold">DRAGON SITIO</div>
+    <div class="logo fw-bold">DRAGON SITIO</div>
 
-      <div class="dropdown d-none d-md-block">
+    <!-- Menús header (md+) -->
+    <div class="d-none d-md-flex align-items-center gap-3">
+      <div class="dropdown">
         <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown">
           Menú 1
         </button>
@@ -26,7 +26,7 @@
         </ul>
       </div>
 
-      <div class="dropdown d-none d-md-block">
+      <div class="dropdown">
         <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown">
           Menú 2
         </button>
@@ -36,7 +36,7 @@
         </ul>
       </div>
 
-      <div class="dropdown d-none d-md-block">
+      <div class="dropdown">
         <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown">
           Menú 3
         </button>
@@ -47,37 +47,70 @@
       </div>
     </div>
 
-    <!-- Barra de búsqueda (oculta en móvil) -->
+    <!-- Barra de búsqueda (md+) -->
     <div class="search-bar d-none d-md-flex align-items-center gap-2">
       <input type="text" class="form-control" placeholder="Buscar...">
       <button class="btn btn-primary">🔍</button>
     </div>
 
-    <!-- Botón hamburguesa visible en móvil -->
+    <!-- Botón hamburguesa (sm) -->
     <button class="hamburger d-md-none">☰</button>
   </header>
 
-  <!-- Panel lateral derecho (menú móvil) -->
+  <!-- Side menus (md+) -->
+  <div class="side-menus d-none d-md-flex flex-column gap-2 m-3">
+    <div class="dropdown">
+      <button class="btn btn-danger dropdown-toggle" type="button" data-bs-toggle="dropdown">Opción 1</button>
+      <ul class="dropdown-menu">
+        <li><a class="dropdown-item" href="#">Subopción 1A</a></li>
+        <li><a class="dropdown-item" href="#">Subopción 1B</a></li>
+      </ul>
+    </div>
+    <div class="dropdown">
+      <button class="btn btn-danger dropdown-toggle" type="button" data-bs-toggle="dropdown">Opción 2</button>
+      <ul class="dropdown-menu">
+        <li><a class="dropdown-item" href="#">Subopción 2A</a></li>
+        <li><a class="dropdown-item" href="#">Subopción 2B</a></li>
+      </ul>
+    </div>
+    <div class="dropdown">
+      <button class="btn btn-danger dropdown-toggle" type="button" data-bs-toggle="dropdown">Opción 3</button>
+      <ul class="dropdown-menu">
+        <li><a class="dropdown-item" href="#">Subopción 3A</a></li>
+        <li><a class="dropdown-item" href="#">Subopción 3B</a></li>
+      </ul>
+    </div>
+    <div class="dropdown">
+      <button class="btn btn-danger dropdown-toggle" type="button" data-bs-toggle="dropdown">Opción 4</button>
+      <ul class="dropdown-menu">
+        <li><a class="dropdown-item" href="#">Subopción 4A</a></li>
+        <li><a class="dropdown-item" href="#">Subopción 4B</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Panel lateral menú móvil -->
   <div class="mobile-menu">
     <button class="close-btn">✕</button>
     <div class="p-3">
-
-      <!-- 🔍 Buscador arriba -->
+      <!-- Buscador -->
       <div class="d-flex align-items-center gap-2 mb-3">
         <input type="text" class="form-control" placeholder="Buscar...">
         <button class="btn btn-primary">🔍</button>
       </div>
       <hr class="text-white">
 
-      <!-- Menús del header -->
-      <div class="accordion accordion-flush mb-3" id="mobileAccordionHeader">
+      <!-- Accordion con todos los menús -->
+      <div class="accordion accordion-flush" id="mobileAccordion">
+
+        <!-- Menús header -->
         <div class="accordion-item bg-transparent border-0">
           <h2 class="accordion-header">
-            <button class="accordion-button collapsed bg-transparent text-white" type="button" data-bs-toggle="collapse" data-bs-target="#menu1Header">
+            <button class="accordion-button collapsed bg-transparent text-white" type="button" data-bs-toggle="collapse" data-bs-target="#menuHeader1">
               Menú 1
             </button>
           </h2>
-          <div id="menu1Header" class="accordion-collapse collapse" data-bs-parent="#mobileAccordionHeader">
+          <div id="menuHeader1" class="accordion-collapse collapse" data-bs-parent="#mobileAccordion">
             <div class="accordion-body">
               <ul class="list-unstyled ps-3">
                 <li><a href="#" class="text-white d-block py-1">Opción 1</a></li>
@@ -87,13 +120,14 @@
             </div>
           </div>
         </div>
+
         <div class="accordion-item bg-transparent border-0">
           <h2 class="accordion-header">
-            <button class="accordion-button collapsed bg-transparent text-white" type="button" data-bs-toggle="collapse" data-bs-target="#menu2Header">
+            <button class="accordion-button collapsed bg-transparent text-white" type="button" data-bs-toggle="collapse" data-bs-target="#menuHeader2">
               Menú 2
             </button>
           </h2>
-          <div id="menu2Header" class="accordion-collapse collapse" data-bs-parent="#mobileAccordionHeader">
+          <div id="menuHeader2" class="accordion-collapse collapse" data-bs-parent="#mobileAccordion">
             <div class="accordion-body">
               <ul class="list-unstyled ps-3">
                 <li><a href="#" class="text-white d-block py-1">Opción A</a></li>
@@ -102,13 +136,14 @@
             </div>
           </div>
         </div>
+
         <div class="accordion-item bg-transparent border-0">
           <h2 class="accordion-header">
-            <button class="accordion-button collapsed bg-transparent text-white" type="button" data-bs-toggle="collapse" data-bs-target="#menu3Header">
+            <button class="accordion-button collapsed bg-transparent text-white" type="button" data-bs-toggle="collapse" data-bs-target="#menuHeader3">
               Menú 3
             </button>
           </h2>
-          <div id="menu3Header" class="accordion-collapse collapse" data-bs-parent="#mobileAccordionHeader">
+          <div id="menuHeader3" class="accordion-collapse collapse" data-bs-parent="#mobileAccordion">
             <div class="accordion-body">
               <ul class="list-unstyled ps-3">
                 <li><a href="#" class="text-white d-block py-1">Configuración</a></li>
@@ -117,17 +152,15 @@
             </div>
           </div>
         </div>
-      </div>
 
-      <!-- Menús laterales (Opción 1-4) -->
-      <div class="accordion accordion-flush" id="mobileAccordionSide">
+        <!-- Side menus -->
         <div class="accordion-item bg-transparent border-0">
           <h2 class="accordion-header">
-            <button class="accordion-button collapsed bg-transparent text-white" type="button" data-bs-toggle="collapse" data-bs-target="#side1">
+            <button class="accordion-button collapsed bg-transparent text-white" type="button" data-bs-toggle="collapse" data-bs-target="#menuSide1">
               Opción 1
             </button>
           </h2>
-          <div id="side1" class="accordion-collapse collapse" data-bs-parent="#mobileAccordionSide">
+          <div id="menuSide1" class="accordion-collapse collapse" data-bs-parent="#mobileAccordion">
             <div class="accordion-body">
               <ul class="list-unstyled ps-3">
                 <li><a href="#" class="text-white d-block py-1">Subopción 1A</a></li>
@@ -136,13 +169,14 @@
             </div>
           </div>
         </div>
+
         <div class="accordion-item bg-transparent border-0">
           <h2 class="accordion-header">
-            <button class="accordion-button collapsed bg-transparent text-white" type="button" data-bs-toggle="collapse" data-bs-target="#side2">
+            <button class="accordion-button collapsed bg-transparent text-white" type="button" data-bs-toggle="collapse" data-bs-target="#menuSide2">
               Opción 2
             </button>
           </h2>
-          <div id="side2" class="accordion-collapse collapse" data-bs-parent="#mobileAccordionSide">
+          <div id="menuSide2" class="accordion-collapse collapse" data-bs-parent="#mobileAccordion">
             <div class="accordion-body">
               <ul class="list-unstyled ps-3">
                 <li><a href="#" class="text-white d-block py-1">Subopción 2A</a></li>
@@ -151,13 +185,14 @@
             </div>
           </div>
         </div>
+
         <div class="accordion-item bg-transparent border-0">
           <h2 class="accordion-header">
-            <button class="accordion-button collapsed bg-transparent text-white" type="button" data-bs-toggle="collapse" data-bs-target="#side3">
+            <button class="accordion-button collapsed bg-transparent text-white" type="button" data-bs-toggle="collapse" data-bs-target="#menuSide3">
               Opción 3
             </button>
           </h2>
-          <div id="side3" class="accordion-collapse collapse" data-bs-parent="#mobileAccordionSide">
+          <div id="menuSide3" class="accordion-collapse collapse" data-bs-parent="#mobileAccordion">
             <div class="accordion-body">
               <ul class="list-unstyled ps-3">
                 <li><a href="#" class="text-white d-block py-1">Subopción 3A</a></li>
@@ -166,13 +201,14 @@
             </div>
           </div>
         </div>
+
         <div class="accordion-item bg-transparent border-0">
           <h2 class="accordion-header">
-            <button class="accordion-button collapsed bg-transparent text-white" type="button" data-bs-toggle="collapse" data-bs-target="#side4">
+            <button class="accordion-button collapsed bg-transparent text-white" type="button" data-bs-toggle="collapse" data-bs-target="#menuSide4">
               Opción 4
             </button>
           </h2>
-          <div id="side4" class="accordion-collapse collapse" data-bs-parent="#mobileAccordionSide">
+          <div id="menuSide4" class="accordion-collapse collapse" data-bs-parent="#mobileAccordion">
             <div class="accordion-body">
               <ul class="list-unstyled ps-3">
                 <li><a href="#" class="text-white d-block py-1">Subopción 4A</a></li>
@@ -181,17 +217,17 @@
             </div>
           </div>
         </div>
-      </div>
 
+      </div>
     </div>
   </div>
 
-  <!-- Carrusel centrado -->
+  <!-- Carrusel -->
   <div class="text-carousel text-center my-4">
     <div class="carousel-text fs-4">¡Bienvenido al mundo de Dragon Ball Z!</div>
   </div>
 
-  <!-- Contenedor oculto con frases del carrusel -->
+  <!-- Contenedor oculto con frases -->
   <div id="info" style="display:none;">
     La historia de Dragon Ball comienza con Son Goku, un niño con cola de mono.
     Junto a la inventora Bulma busca las siete esferas del dragón.
@@ -207,58 +243,22 @@
   <!-- Título -->
   <h1 class="text-center">Dragon Ball Z...</h1>
 
-  <!-- Contenedor flex: Menús izquierda + columnas derecha -->
-  <div class="content-wrapper d-flex gap-4">
-
-    <!-- Menús verticales a la izquierda -->
-    <div class="side-menus d-flex flex-column gap-2">
-      <div class="dropdown">
-        <button class="btn btn-danger dropdown-toggle" type="button" data-bs-toggle="dropdown">Opción 1</button>
-        <ul class="dropdown-menu">
-          <li><a class="dropdown-item" href="#">Subopción 1A</a></li>
-          <li><a class="dropdown-item" href="#">Subopción 1B</a></li>
-        </ul>
-      </div>
-      <div class="dropdown">
-        <button class="btn btn-danger dropdown-toggle" type="button" data-bs-toggle="dropdown">Opción 2</button>
-        <ul class="dropdown-menu">
-          <li><a class="dropdown-item" href="#">Subopción 2A</a></li>
-          <li><a class="dropdown-item" href="#">Subopción 2B</a></li>
-        </ul>
-      </div>
-      <div class="dropdown">
-        <button class="btn btn-danger dropdown-toggle" type="button" data-bs-toggle="dropdown">Opción 3</button>
-        <ul class="dropdown-menu">
-          <li><a class="dropdown-item" href="#">Subopción 3A</a></li>
-          <li><a class="dropdown-item" href="#">Subopción 3B</a></li>
-        </ul>
-      </div>
-      <div class="dropdown">
-        <button class="btn btn-danger dropdown-toggle" type="button" data-bs-toggle="dropdown">Opción 4</button>
-        <ul class="dropdown-menu">
-          <li><a class="dropdown-item" href="#">Subopción 4A</a></li>
-          <li><a class="dropdown-item" href="#">Subopción 4B</a></li>
-        </ul>
-      </div>
+  <!-- Columnas de texto -->
+  <div class="content-wrapper d-flex gap-4 justify-content-end flex-wrap">
+    <div class="col-md-3 mb-3">
+      <p>La historia de Dragon Ball comienza con Son Goku, un niño con cola de mono inspirado en el mito chino del Rey Mono.</p>
+      <p>Junto a la inventora Bulma busca las siete esferas del dragón.</p>
+      <p>Su aventura mezcla artes marciales, fantasía y ciencia ficción, evolucionando hacia sagas de acción más complejas.</p>
     </div>
-
-    <!-- Columnas de texto -->
-    <div class="col-md-8 d-flex flex-wrap gap-4 justify-content-end">
-      <div class="col-md-3 mb-3">
-        <p>La historia de Dragon Ball comienza con Son Goku, un niño con cola de mono inspirado en el mito chino del Rey Mono.</p>
-        <p>Junto a la inventora Bulma busca las siete esferas del dragón.</p>
-        <p>Su aventura mezcla artes marciales, fantasía y ciencia ficción, evolucionando hacia sagas de acción más complejas.</p>
-      </div>
-      <div class="col-md-3 mb-3">
-        <p>La trama se centra en Goku, sus amigos y sus combates contra poderosos enemigos.</p>
-        <p>Descubre su origen extraterrestre como saiyajin.</p>
-        <p>Busca superarse a sí mismo y proteger a sus seres queridos.</p>
-      </div>
-      <div class="col-md-3 mb-3">
-        <p>Inspiración y creación: El manga original, creado por Akira Toriyama, se publicó en 1984.</p>
-        <p>Está inspirado en la novela china clásica "Viaje al Oeste".</p>
-        <p>Toriyama combinó artes marciales, magia, fantasía y elementos de ciencia ficción.</p>
-      </div>
+    <div class="col-md-3 mb-3">
+      <p>La trama se centra en Goku, sus amigos y sus combates contra poderosos enemigos.</p>
+      <p>Descubre su origen extraterrestre como saiyajin.</p>
+      <p>Busca superarse a sí mismo y proteger a sus seres queridos.</p>
+    </div>
+    <div class="col-md-3 mb-3">
+      <p>Inspiración y creación: El manga original, creado por Akira Toriyama, se publicó en 1984.</p>
+      <p>Está inspirado en la novela china clásica "Viaje al Oeste".</p>
+      <p>Toriyama combinó artes marciales, magia, fantasía y elementos de ciencia ficción.</p>
     </div>
   </div>
 
@@ -267,3 +267,5 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
+
+
